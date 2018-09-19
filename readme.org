@@ -16,9 +16,9 @@ You may, though, keep in mind that I have a set order for these course modules. 
 ** What's included
 Also note this repository is a _work in progress_. I am building and refining it as I go. Check back or perform a `git pull` periodically to get updates.
 
-*** TODO Lectures & Slides [11%]
+*** TODO Lectures & Slides [22%]
    - [ ] How to get the most out these modules
-   - [ ] What is Python?
+   - [X] [[./introduction][What is Python]]?
    - [ ] Data Types & Variables
    - [ ] Iterables (lists, dictionaries, tuples, iterating, slicing, built ins)
    - [ ] Control Flow (looping, operators, try/exception blocks)
