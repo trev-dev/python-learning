@@ -16,17 +16,13 @@ You may, though, keep in mind that I have a set order for these course modules. 
 ** What's included
 Also note this repository is a _work in progress_. I am building and refining it as I go. Check back or perform a `git pull` periodically to get updates.
 
-*** TODO Lectures & Slides [25%]
+*** TODO Lectures & Slides [50%]
    - [ ] [[./howto][How to get the most out these modules]]
    - [X] [[./introduction][What is Python]]?
-   - [-] [[./datatypes][Data Types & Variables]]
-     - [-] Add explanations of missing datatypes (bytestrings, etc)
-       - [X] Draft this section
-       - [X] Add missing datatypes (bytestrings, etc)
-       - [ ] Do a copy edit
-   - [ ] [[./controlflow][Control Flow]] (looping, operators, try/exception blocks)
-   - [50%] [[./iterables][Iterables]] (lists, dictionaries, tuples, iterating, slicing, built ins)
-     - [X] Basics (lists dictionaries, tuples, sets, iterating)
+   - [X] [[./datatypes][Data Types & Variables]]
+   - [X] [[./controlflow][Control Flow]] (looping, operators, try/exception blocks)
+   - [50%] Iterables (lists, dictionaries, tuples, iterating, slicing, built ins)
+     - [X] [[./iterables-basic][Basics]] (lists dictionaries, tuples, sets, iterating)
      - [ ] Advanced (slicing, built-ins, comprehension)
    - [X] [[./functions][Functions]] (basics, lambdas, closures, decorators)
    - [ ] The Standard Library [0/2]
