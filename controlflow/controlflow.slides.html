@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>iterables-basic slides</title>
+<title>controlflow slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13202,63 +13202,37 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Iterables">Iterables<a class="anchor-link" href="#Iterables">&#182;</a></h1><p>Itereables are an important part of Python as well as all other languages. They give us the ability to organize data as well as <em>iterate</em> over that data. With the use of <em>iteration</em> we can perform a set of instructions on that data that would otherwise be tedious and time consuming.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Common-Iterables">Common Iterables<a class="anchor-link" href="#Common-Iterables">&#182;</a></h2>
+<h1 id="Control-Flow">Control Flow<a class="anchor-link" href="#Control-Flow">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Strings</li>
-</ul>
+<p>Control flow is how we handle logic in programming. Without it, we would just have a bunch of data that doesn't really <em>do anything</em>. You may have heard that computers are just binary and made up of "ones and zeroes". This isn't that far from the truth!</p>
+<p>All things in logic programming can be boiled down to one or zero or "True or False".</p>
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Lists</li>
-</ul>
+<h2 id="Evaluating-Data">Evaluating Data<a class="anchor-link" href="#Evaluating-Data">&#182;</a></h2><p>As we covered in the data types module, we can evaluate data to arrive at a "True" or "False" conclusion with the use of keywords and operators. Let's start with operators.</p>
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Operators test two pieces of data to evaluate whether the test is True or False.</p>
 <ul>
-<li>Dictionaries</li>
-</ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Sets</li>
-</ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Tuples</li>
+<li><strong>==</strong> Test for equality, or whether or not two pieces of data are the same</li>
+<li><strong>!=</strong> Test for <em>inequality</em>, or whether the data is not the same</li>
+<li><strong>&gt;</strong> or <strong>&lt;</strong> Test if something is greater than or less than the other</li>
+<li><strong>&gt;=</strong> or <strong>&lt;=</strong> Test if somethings greater than/less than or <em>equal</em> to the other.</li>
+<li><strong>not</strong> Reverses/flips an operator on its head. (Check for not True or not False).</li>
 </ul>
 
 </div>
@@ -13267,7 +13241,224 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h2><p>Lists are the most common and basic way to create an iterable. You can create a new list using brackets. Lists can contain any data type (including more lists). Lists are <em>indexed</em> by number. Indexes start counting at 0. The values of indexed items are <em>mutable</em> which means they can be changed.</p>
+<p>Lets take a look at some examples.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">is_greater</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_greater</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;Trevor&#39;</span>
+<span class="n">admin</span> <span class="o">=</span> <span class="s1">&#39;Guido&#39;</span>
+
+<span class="n">is_authorized</span> <span class="o">=</span> <span class="n">user</span> <span class="o">==</span> <span class="n">admin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_authorized</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
+
+<span class="n">not_red</span> <span class="o">=</span> <span class="n">color</span> <span class="o">!=</span> <span class="s1">&#39;red&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">not_red</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The values "True" or "False" aren't the only values that can be interpreted as True or False. Some "empty" data values can also be interpreted as "Falsy" and may be evaluated against. Some of these data types haven't been covered yet, so don't worry if they look unfamiliar.</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>0</strong></li>
+<li><strong>0.0</strong></li>
+<li><strong>''</strong> (empty string)</li>
+<li><strong>[]</strong> (empty list)</li>
+<li><strong>{}</strong> (empty dictionary)</li>
+<li><strong>b''</strong> (empty bytes)</li>
+<li><strong>set()</strong> (an empty set)</li>
+</ul>
+<p>In short, most empty values will test as <em>False</em></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Keywords">Keywords<a class="anchor-link" href="#Keywords">&#182;</a></h2><p>There are keywords all throughout Python that allow us to perform operations. In the context of control flow, keywords are everything. When paired with evaluations, we can arrive at useful conclusions. Take the "if/else" keywords for example:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">admin</span> <span class="o">=</span> <span class="s1">&#39;Guido&#39;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;Trevor&#39;</span>
+
+<span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="n">admin</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;User Authorized&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not Authorized&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Not Authorized
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">min_age</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">user_age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;How old are you? &#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">user_age</span> <span class="o">&gt;=</span> <span class="n">min_age</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here</span><span class="se">\&#39;</span><span class="s1">s a beer!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here</span><span class="se">\&#39;</span><span class="s1">s a cola!&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>How old are you? 21
+Here&#39;s a beer!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use the "elif" (else-if) keyword to test conditions in order of <em>priority</em> in a case where we're looking at several expected situations. If none of the situations end up being "truthy", then we can use the <em>else</em> keyword to perform a default operation.</p>
 
 </div>
 </div>
@@ -13277,13 +13468,15 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Cats&#39;</span><span class="p">,</span> <span class="s1">&#39;Dogs&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">donuts</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">required_donuts</span> <span class="o">=</span> <span class="mi">13</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
-<span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Pizza&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">donuts</span> <span class="o">&lt;</span> <span class="n">required_donuts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We need more donuts!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">donuts</span> <span class="o">&gt;</span> <span class="n">required_donuts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have too many donuts!!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have a perfect number of donuts.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13300,10 +13493,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-4
-Pizza
-Dogs
+<pre>We need more donuts!
 </pre>
 </div>
 </div>
@@ -13315,23 +13505,25 @@ Dogs
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h2><p>Dictionaries are like lists, but instead contain key-word values. Dictionaries are great for organizing structured data. They are created using curly braces. They can also contain any data type. Unlike lists, we reference dictionaries by <em>key</em> instead of index. Keys are <em>case sensitive</em> and follow the same naming conventions as variables. Keys must be wrapped in quotes. Dictionary <em>values</em> are <em>mutable</em>.</p>
+<p>We can chain operators together with the <em>and</em> or the <em>or</em> keyword to do multiple checks on one line.</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Trevor&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="s1">&#39;skills&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Javascript&#39;</span><span class="p">]}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">donuts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">required_donuts</span> <span class="o">=</span> <span class="mi">13</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>
-
-<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;HTML&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;skills&#39;</span><span class="p">])</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">donuts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have no donuts!!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">donuts</span> <span class="o">&lt;</span> <span class="n">required_donuts</span> <span class="ow">or</span> <span class="n">donuts</span> <span class="o">&gt;</span> <span class="n">required_donuts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have the wrong number of donuts!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have the perfect number of donuts&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13348,9 +13540,7 @@ Dogs
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Trevor
-34
-[&#39;Python&#39;, &#39;Javascript&#39;, &#39;HTML&#39;]
+<pre>We have no donuts!!
 </pre>
 </div>
 </div>
@@ -13362,67 +13552,8 @@ Dogs
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h2><p>Tuples work just like lists, only they are <em>immutable</em>. This means that once they're created, their values cannot be changed. Tuples are created with parenthesis.</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="n">my_tuple</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-e0ef7d6346f5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>my_tuple<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>my_tuple<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;tuple&#39; object has no attribute &#39;append&#39;</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sets">Sets<a class="anchor-link" href="#Sets">&#182;</a></h2><p>Sets are a collection of unique list items. You typically use the set() built in function to quickly filter down long lists with lots of redundant data. You may also create a new set using the same function.</p>
+<p>Important Note: <em>Order is important!</em> Python will interpret code from top to down, left to right. It's important that we order our logic in such a way that all of our cases get evaluated.</p>
+<p>If we move the <em>not donuts</em> check down below the first <em>elif</em> check, it would <em>never get evaluated</em>.</p>
 
 </div>
 </div>
@@ -13432,9 +13563,16 @@ Dogs
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">groceries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Chips&#39;</span><span class="p">,</span> <span class="s1">&#39;Apples&#39;</span><span class="p">,</span> <span class="s1">&#39;Sausage&#39;</span><span class="p">,</span> <span class="s1">&#39;Apples&#39;</span><span class="p">,</span> <span class="s1">&#39;Sausage&#39;</span><span class="p">,</span> <span class="s1">&#39;Chips&#39;</span><span class="p">,</span> <span class="s1">&#39;Bacon&#39;</span><span class="p">]</span>
-<span class="n">groceries</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">groceries</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">groceries</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">donuts</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">required_donuts</span> <span class="o">=</span> <span class="mi">13</span>
+
+<span class="k">if</span> <span class="n">donuts</span> <span class="o">&lt;</span> <span class="n">required_donuts</span> <span class="ow">or</span> <span class="n">donuts</span> <span class="o">&gt;</span> <span class="n">required_donuts</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have the wrong number of donuts!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="ow">not</span> <span class="n">donuts</span><span class="p">:</span>
+    <span class="c1">## This will never run as the previous check will trigger on 0 donuts as well.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have no donuts!!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We have the perfect number of donuts&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13451,7 +13589,7 @@ Dogs
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Chips&#39;, &#39;Sausage&#39;, &#39;Bacon&#39;, &#39;Apples&#39;}
+<pre>We have the wrong number of donuts!
 </pre>
 </div>
 </div>
@@ -13463,15 +13601,62 @@ Dogs
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Iteration">Iteration<a class="anchor-link" href="#Iteration">&#182;</a></h2><p>There are two major special keywords that we can use to perform iterations.</p>
+<p>We can also use the <em>and</em> keyword in order to require <em>multiple</em> conditions for a check.</p>
 
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="c1"># in centimeters</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mf">121.92</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">130</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You may go on the ride&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sorry, come back later&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sorry, come back later
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-Practice">Let's Practice<a class="anchor-link" href="#Let's-Practice">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="for/in">for/in<a class="anchor-link" href="#for/in">&#182;</a></h3><p>Iterates over every single item in an iterable. The loop stops if you <em>break</em> it or if it finishes the last item in the iterable. This is probably the most commonly used method for iterating over lists/dictionaries.</p>
+<ul>
+<li>Create a list of menu options</li>
+</ul>
 
 </div>
 </div>
@@ -13479,29 +13664,20 @@ Dogs
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="while">while<a class="anchor-link" href="#while">&#182;</a></h3><p>Loops/iterates over and over again until some explicit condition breaks the loop and causes the block to exit. This loop is somewhat "dangerous" to use as while loops can inadvertently cause never-ending loops. These are commonly used to keep a program/process running until it needs to stop. While loops are mostly used for control flow.</p>
+<ul>
+<li>Use the input function which takes a string and returns whatever was entered.</li>
+</ul>
 
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-For/In-Keywords">The For/In Keywords<a class="anchor-link" href="#The-For/In-Keywords">&#182;</a></h2><p>We start a for loop with the "for" keyword, followed by the variable name for each <em>item</em> in the iterable (this can be anything you want), then the "in" keyword followed by the <em>iterable</em>.</p>
-<p>That's a mouthful. Here's some examples:</p>
-
-</div>
-</div>
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">num</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Select an option: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13518,11 +13694,8 @@ Dogs
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-4
-6
-8
-10
+<pre>Select an option: 1
+1
 </pre>
 </div>
 </div>
@@ -13531,547 +13704,11 @@ Dogs
 </div>
 
 </div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Zack&#39;</span><span class="p">,</span> <span class="s1">&#39;Jack&#39;</span><span class="p">,</span> <span class="s1">&#39;Mack&#39;</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">my_list</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The name is </span><span class="si">{name}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The name is Zack
-The name is Jack
-The name is Mack
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you need the index of each item, you may use the enumerate() built in function to extract the index. You may also use any name you'd like for the index</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
-    <span class="n">my_list</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[2, 4, 6, 8]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can also use for/in with dictionaries</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Trevor&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">34</span><span class="p">}</span>
-
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="n">item</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>name
-Trevor
-age
-34
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-While-Keyword">The While Keyword<a class="anchor-link" href="#The-While-Keyword">&#182;</a></h2><p>"While" is much more simple than for/in. We simply type <em>while</em> and then some sort of condition upon which to break the loop. The cycle will continue step by step, line by line until the loop is broken</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">some_number</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">while</span> <span class="n">some_number</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">some_number</span><span class="p">)</span>
-    <span class="n">some_number</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We can iterate over iterables with a while loop, but this method is (somewhat) less intuitive.</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Thing&#39;</span><span class="p">,</span> <span class="s1">&#39;Other Thing&#39;</span><span class="p">,</span> <span class="s1">&#39;Yet Another Thing&#39;</span><span class="p">]</span>
-
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">some_list</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">some_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Thing
-Other Thing
-Yet Another Thing
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A more common use for while loops is to keep a set of instructions running indefinitely. In simpler words, we can keep a program running until we <em>want</em> it to exit.</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">finished</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Select an option:</span>
-<span class="s2">1) Keep going</span>
-<span class="s2">2) Quit</span>
-
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="k">while</span> <span class="ow">not</span> <span class="n">finished</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="n">option</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter your choice: &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Going on...&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
-        <span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Select an option:
-1) Keep going
-2) Quit
-
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section><section>Enter your choice: 1
-
-Select an option:
-1) Keep going
-2) Quit
-
-
-Enter your choice: 2
-Finished</section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Continue,-Break-&amp;-Pass-Keywords">Continue, Break &amp; Pass Keywords<a class="anchor-link" href="#Continue,-Break-&amp;-Pass-Keywords">&#182;</a></h2><p>We can also use the <em>continue</em>, <em>break</em> and <em>pass</em> keywords to help control a "for" or "while" loop</p>
-
-</div>
-</div>
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><em>continue</em> tells the loop to skip over the rest of the loop instructions and carry on with the next iteration.</li>
-</ul>
-<p><strong>Note</strong>: the range() built-in function automatically creates an iterable that starts at 0 and contains integers that increment by 1 until the iterable reaches the length of the number called. For example: range(5) = [0, 1, 2, 3, 4]</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">continue</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outside of Loop&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-3
-4
-Outside of Loop
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><em>break</em> tells the loop to exit right away. </li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outside of Loop&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-Outside of Loop
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><em>pass</em> tells Python to ignore a condition and carry on as though it wasn't there. It's typically used as a placeholder for future work.</li>
-</ul>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">pass</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Outside of Loop&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-Outside of Loop
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's revisit our last "while" loop example, but this time, we'll use <em>continue</em> and <em>break</em></p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Select an option:</span>
-<span class="s2">1) Keep going</span>
-<span class="s2">2) Quit</span>
-
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-    <span class="n">option</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter your choice: &#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Going on...&#39;</span><span class="p">)</span>
-        <span class="k">continue</span>
-    <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Select an option:
-1) Keep going
-2) Quit
-
-
-Enter your choice: 1
-Going on...
-
-Select an option:
-1) Keep going
-2) Quit
-
-
-Enter your choice: 2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Let's-Practice!">Let's Practice!<a class="anchor-link" href="#Let's-Practice!">&#182;</a></h2>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Create list containing a minumum of 5 items and use a <em>for</em> loop to modify the items in some way and then print() them out.</li>
-</ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Use the same list as before, but this time, perform a while loop to print() out the items in the list until the end of the list is reached.</li>
-</ul>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Create a dictionary of pet names and owners. Use a for loop to print out the dictionary, entry by entry, in a human readable string. For example: {'pet': 'Spot', 'owner': 'Carl'} =&gt; "Spot belongs to Carl".</li>
+<li>Print something different depending on whatever option was chosen. </li>
 </ul>
 
 </div>
