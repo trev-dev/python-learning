@@ -1,49 +1,33 @@
 * Python presentations & slides
-  :PROPERTIES:
-  :ID:       fda7bdb4-fd1a-499d-ba56-3d4c063650f0
-  :END:
 ** What is this repository?
-   :PROPERTIES:
-   :ID:       76a5b37d-fb33-4f84-a3ce-146ed45dcf10
-   :END:
 This is a repository that contains python lectures, slides & exercises for my Python basics course modules. You may either view them using [[http://jupyter.org/][Jupyter Notebook]] or by simply opening the corresponding slides.html within each folder. It's purpose is to guide a lecture on the basics of Python and provide context & examples.
 
 ** Where's the solutions to the exercises?
-   :PROPERTIES:
-   :ID:       cf56141b-9388-47a8-b4e2-a0b5973f3ae1
-   :END:
 They will be in a separate repository and made available after this repository is more or less complete.
 
 ** May I use this repository?
-   :PROPERTIES:
-   :ID:       17dd3688-af33-4ca9-ba2d-1a18d27c7af9
-   :END:
 You are 100% free to use, fork, change and reproduce this content. All I ask for is the occassional plug.
 
 If you want to use these slides with all of their interactive glory in Jupyter Notebook, you will need to use the [[https://github.com/damianavila/RISE][RISE]] extension. Both Jupyter Nodebook and RISE can be installed by following directions for various Linux distros or your other OS of choice (Mac/Windows).
 
 ** May I contribute to this repository?
-   :PROPERTIES:
-   :ID:       c3be09b2-4086-436e-b8e1-258e8b8b3989
-   :END:
 You may, though, keep in mind that I have a set order for these course modules. I will need to merge changes at my discretion.
 
 ** What's included
-   :PROPERTIES:
-   :ID:       444e5af5-0bbe-46a4-97c8-ec6ed329872e
-   :END:
 Also note this repository is a _work in progress_. I am building and refining it as I go. Check back or perform a `git pull` periodically to get updates.
 
-*** TODO Lectures & Slides [33%]
-    SCHEDULED: <2018-10-05 Fri 08:00-10:00>
-    :PROPERTIES:
-    :ID:       a60a6f74-c018-4fa5-8601-7f8267a7484c
-    :END:
-   - [ ] How to get the most out these modules
+*** TODO Lectures & Slides [25%]
+   - [ ] [[./howto][How to get the most out these modules]]
    - [X] [[./introduction][What is Python]]?
-   - [X] [[./datatypes][Data Types & Variables]]
-   - [ ] Iterables (lists, dictionaries, tuples, iterating, slicing, built ins)
-   - [ ] Control Flow (looping, operators, try/exception blocks)
+   - [-] [[./datatypes][Data Types & Variables]]
+     - [-] Add explanations of missing datatypes (bytestrings, etc)
+       - [X] Draft this section
+       - [X] Add missing datatypes (bytestrings, etc)
+       - [ ] Do a copy edit
+   - [ ] [[./controlflow][Control Flow]] (looping, operators, try/exception blocks)
+   - [50%] [[./iterables][Iterables]] (lists, dictionaries, tuples, iterating, slicing, built ins)
+     - [X] Basics (lists dictionaries, tuples, sets, iterating)
+     - [ ] Advanced (slicing, built-ins, comprehension)
    - [X] [[./functions][Functions]] (basics, lambdas, closures, decorators)
    - [ ] The Standard Library [0/2]
      - [ ] What's in the Library (where to learn more)
