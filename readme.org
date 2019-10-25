@@ -2,6 +2,8 @@
 ** What is this repository?
 This is a repository that contains python lectures, slides & exercises for my Python basics course modules. You may either view them using [[http://jupyter.org/][Jupyter Notebook]] or by simply opening the corresponding slides.html within each folder. It's purpose is to guide a lecture on the basics of Python and provide context & examples.
 
+**Note:** If you use Jupyter Notebook, you will also need the [[https://rise.readthedocs.io/en/maint-5.5/][RISE plugin]] in order to use the slideshow functionality.
+
 ** Where's the solutions to the exercises?
 They will be in a separate repository and made available after this repository is more or less complete.
 
